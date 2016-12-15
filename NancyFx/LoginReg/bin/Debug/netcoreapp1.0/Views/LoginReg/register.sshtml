@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Register Page</title>
+    </head>
+    <body>
+        <h2>Register Here Please</h2>
+
+        @If.Context.ViewBag.regIsError
+            @Each
+                <li>@Current</li>
+            @EndEach
+        @EndIf
+        
+        <form action="/register" method="post">
+            First Name: <input type="text" name="firstName">
+            Last Name: <input type="text" name="lastName">
+            Email: <input type="text" name="email">
+            Password: <input type="password" name="password">
+            Password Confirmation: <input type="password" name="confirm">
+            <input type="submit" value="Register">
+        </form>
+    </body>
+</html>

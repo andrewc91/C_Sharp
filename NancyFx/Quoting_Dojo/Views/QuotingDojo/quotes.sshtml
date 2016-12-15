@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Quotes</title>
+    </head>
+    <body>
+        <h1>Here are the awesome quotes!</h1>
+        <button><a href="/">Back to Home</a></button>
+
+        @Each
+            <h3>"@Current.quote"</h3>
+            <p>- @Current.name at @Current.created_at</p>
+        @EndEach
+    </body>
+</html>

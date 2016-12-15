@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <title>Hello</title>
+    </head>
+    <body>
+        <h1>Welcome to Login and Registration!</h1>
+
+        <h2>First Time Here? <a href="/register">Click Here to Register</a></h2>
+
+        <h1>Have an account? Login Here</h1>
+
+        @If.Context.ViewBag.logIsError
+            @Each
+                <li>@Current</li>
+            @EndEach
+        @EndIf
+
+        <form action="/login" method="post">
+            Email: <input type="text" name="email">
+            Password: <input type="password" name="password">
+            <input type="submit" value="Login">
+        </form>
+    </body>
+</html>
